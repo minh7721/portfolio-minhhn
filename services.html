@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Hoàng Nhật Minh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Loader -->
+    <script src="js/style-loader.js"></script>
+  </head>
+  <body
+    class="antialiased min-h-screen flex flex-col selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Hero -->
+        <div class="text-center mb-20">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Technical Solutions
+          </h1>
+          <p class="text-text-muted max-w-2xl mx-auto text-lg leading-relaxed">
+            I don't just build websites; I engineer robust backend systems,
+            optimize legacy codebases, and design APIs that scale with your
+            business.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
+          <!-- Service 1 -->
+          <div class="bento-card group">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Laravel Backend Development
+            </h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-6">
+              Custom application architecture using best practices. From
+              monolithic apps to microservices, I build secure, maintainable
+              codebases.
+            </p>
+            <ul class="space-y-2 text-sm text-text-muted">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-primary rounded-full"></div>
+                SaaS Architecture
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-primary rounded-full"></div>
+                Queue System Optimization
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-primary rounded-full"></div>
+                Legacy Migration
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bento-card group">
+            <div
+              class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="search" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Search System Engineering
+            </h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-6">
+              Implementation of Elasticsearch, Algolia, or Medisearch for
+              real-time document indexing and retrieval.
+            </p>
+            <ul class="space-y-2 text-sm text-text-muted">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                Full-text Search
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                Fuzzy Matching & Aggregations
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                Performance Tuning
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bento-card group">
+            <div
+              class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              RESTful API Design
+            </h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-6">
+              Building high-performance APIs for mobile apps and SPAs.
+              Documented with Swagger/OpenAPI.
+            </p>
+            <ul class="space-y-2 text-sm text-text-muted">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                JWT Authentication
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                Rate Limiting & Caching
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                Third-party Integrations
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bento-card group">
+            <div
+              class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Document Processing
+            </h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-6">
+              Automated pipelines for PDF generation, conversion, OCR, and
+              storage management (S3/MinIO).
+            </p>
+            <ul class="space-y-2 text-sm text-text-muted">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-purple-500 rounded-full"></div>
+                PDF/Word Conversion
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-purple-500 rounded-full"></div>
+                OCR Text Extraction
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-purple-500 rounded-full"></div>
+                Secure File Storage
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="bento-card group">
+            <div
+              class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="bar-chart" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Technical SEO</h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-6">
+              Optimizing large-scale platforms for search engines. Sitemap
+              generation, structured data, and crawl budget optimization.
+            </p>
+            <ul class="space-y-2 text-sm text-text-muted">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-orange-500 rounded-full"></div>
+                Schema.org Implementation
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-orange-500 rounded-full"></div>
+                Core Web Vitals
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-orange-500 rounded-full"></div>
+                SSR/Prerendering Solutions
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="bento-card group">
+            <div
+              class="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center text-pink-500 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="server" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">DevOps & Cloud</h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-6">
+              Deployment setup using Docker, Nginx, and cloud providers (GCP,
+              DigitalOcean). Setting up CI/CD pipelines.
+            </p>
+            <ul class="space-y-2 text-sm text-text-muted">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-pink-500 rounded-full"></div>
+                Docker Compose
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-pink-500 rounded-full"></div>
+                Google Cloud Run
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 bg-pink-500 rounded-full"></div>
+                Github Actions
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Process Section -->
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-white mb-12 text-center">
+            My Workflow
+          </h2>
+
+          <div class="relative">
+            <!-- Line connecting steps -->
+            <div
+              class="absolute left-6 top-6 bottom-6 w-0.5 bg-white/10 md:left-1/2 md:-ml-px"
+            ></div>
+
+            <!-- Step 1 -->
+            <div class="relative flex flex-col md:flex-row gap-8 mb-12 group">
+              <div class="md:w-1/2 md:text-right pr-12 order-2 md:order-1">
+                <h3
+                  class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+                >
+                  1. Analysis
+                </h3>
+                <p class="text-text-muted text-sm">
+                  Deep dive into requirements, database schema planning, and
+                  selecting the right tech stack.
+                </p>
+              </div>
+              <div
+                class="absolute left-6 -ml-6 md:left-1/2 flex items-center justify-center order-1 md:order-2"
+              >
+                <div class="process-step">1</div>
+              </div>
+              <div
+                class="md:w-1/2 md:pl-12 order-3 md:order-3 hidden md:block"
+              ></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative flex flex-col md:flex-row gap-8 mb-12 group">
+              <div
+                class="md:w-1/2 md:text-right pr-12 order-2 md:order-1 hidden md:block"
+              ></div>
+              <div
+                class="absolute left-6 -ml-6 md:left-1/2 flex items-center justify-center order-1 md:order-2"
+              >
+                <div class="process-step">2</div>
+              </div>
+              <div class="md:w-1/2 md:pl-12 order-2 md:order-3 pl-12">
+                <h3
+                  class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+                >
+                  2. Architecture
+                </h3>
+                <p class="text-text-muted text-sm">
+                  Designing database relationships, API endpoints, and system
+                  infrastructure.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative flex flex-col md:flex-row gap-8 mb-12 group">
+              <div
+                class="md:w-1/2 md:text-right pr-12 order-2 md:order-1 pl-12 md:pl-0"
+              >
+                <h3
+                  class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+                >
+                  3. Development
+                </h3>
+                <p class="text-text-muted text-sm">
+                  Writing clean, documented, and tested code. Implementing core
+                  logic and integrations.
+                </p>
+              </div>
+              <div
+                class="absolute left-6 -ml-6 md:left-1/2 flex items-center justify-center order-1 md:order-2"
+              >
+                <div class="process-step">3</div>
+              </div>
+              <div
+                class="md:w-1/2 md:pl-12 order-3 md:order-3 hidden md:block"
+              ></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative flex flex-col md:flex-row gap-8 group">
+              <div
+                class="md:w-1/2 md:text-right pr-12 order-2 md:order-1 hidden md:block"
+              ></div>
+              <div
+                class="absolute left-6 -ml-6 md:left-1/2 flex items-center justify-center order-1 md:order-2"
+              >
+                <div class="process-step">4</div>
+              </div>
+              <div class="md:w-1/2 md:pl-12 order-2 md:order-3 pl-12">
+                <h3
+                  class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors"
+                >
+                  4. Optimization
+                </h3>
+                <p class="text-text-muted text-sm">
+                  Performance tuning, query optimization, caching setup, and
+                  deployment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

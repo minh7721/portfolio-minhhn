@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Hoàng Nhật Minh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Loader -->
+    <script src="js/style-loader.js"></script>
+  </head>
+  <body
+    class="antialiased min-h-screen flex flex-col selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Engineering Logs
+          </h1>
+          <p class="text-text-muted text-lg">
+            Thoughts on backend architecture, performance, and scaling.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <a href="blog-detail.html" class="bento-card group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                alt="Data"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary border border-white/10"
+              >
+                ELASTICSEARCH
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
+                <span>Jan 12, 2026</span>
+                <span>•</span>
+                <span>8 min read</span>
+              </div>
+              <h2
+                class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors"
+              >
+                Optimizing Elasticsearch Indices for Large Datasets
+              </h2>
+              <p class="text-text-muted text-sm line-clamp-3">
+                When dealing with millions of documents, default settings won't
+                cut it. Learn how we reduced search latency by 60% using custom
+                analyzers and shard allocation strategies.
+              </p>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="blog-detail.html" class="bento-card group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800"
+                alt="Queue"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary border border-white/10"
+              >
+                LARAVEL
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
+                <span>Dec 28, 2025</span>
+                <span>•</span>
+                <span>6 min read</span>
+              </div>
+              <h2
+                class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors"
+              >
+                Handling Heavy Background Jobs with Laravel Horizon
+              </h2>
+              <p class="text-text-muted text-sm line-clamp-3">
+                Best practices for managing PDF conversion pipelines. Managing
+                retries, timeouts, and memory leaks in long-running queue
+                workers.
+              </p>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="blog-detail.html" class="bento-card group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800"
+                alt="SEO"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary border border-white/10"
+              >
+                SEO
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
+                <span>Dec 10, 2025</span>
+                <span>•</span>
+                <span>5 min read</span>
+              </div>
+              <h2
+                class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors"
+              >
+                Technical SEO for Programmatic SEO Sites
+              </h2>
+              <p class="text-text-muted text-sm line-clamp-3">
+                How to handle sitemaps, canonical tags, and structured data for
+                websites with millions of auto-generated pages.
+              </p>
+            </div>
+          </a>
+
+          <!-- Article 4 -->
+          <a href="blog-detail.html" class="bento-card group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&q=80&w=800"
+                alt="Docker"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-background/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary border border-white/10"
+              >
+                DEVOPS
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
+                <span>Nov 15, 2025</span>
+                <span>•</span>
+                <span>10 min read</span>
+              </div>
+              <h2
+                class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors"
+              >
+                Zero-Downtime Deployments with Docker & GitHub Actions
+              </h2>
+              <p class="text-text-muted text-sm line-clamp-3">
+                A complete guide to setting up a CI/CD pipeline that builds,
+                tests, and deploys your Laravel application without dropping a
+                single request.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

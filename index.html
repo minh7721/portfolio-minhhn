@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoàng Nhật Minh | Senior PHP Laravel Developer</title>
+    <meta
+      name="description"
+      content="Senior PHP Laravel Developer specializing in scalable document processing systems, search engines, and high-performance APIs."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Loader (Injects styles into Tailwind CDN) -->
+    <script src="js/style-loader.js"></script>
+  </head>
+  <body
+    class="antialiased min-h-screen flex flex-col selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Hero Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+          <!-- Main Intro -->
+          <div
+            class="md:col-span-8 bento-card min-h-[400px] flex flex-col justify-center"
+          >
+            <div class="absolute top-0 right-0 p-6 opacity-20">
+              <i data-lucide="terminal" class="w-24 h-24"></i>
+            </div>
+            <div class="space-y-6 relative z-10">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider border border-primary/20"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                ></span>
+                Available for new projects
+              </div>
+              <h1
+                class="text-5xl md:text-7xl font-bold leading-[0.9] text-white"
+              >
+                Senior PHP <br />
+                <span class="text-primary">Laravel Developer</span>
+              </h1>
+              <p class="text-xl text-text-muted max-w-2xl leading-relaxed">
+                Engineering scalable document processing systems,
+                high-performance search engines, and SEO-driven platforms
+                handling millions of records.
+              </p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <a
+                  href="#projects"
+                  class="px-7 py-3 bg-primary text-background font-bold rounded-lg hover:bg-white transition-colors flex items-center gap-2"
+                >
+                  View Projects
+                  <i data-lucide="folder-open" class="w-4 h-4"></i>
+                </a>
+                <a
+                  href="https://github.com/minhhn"
+                  target="_blank"
+                  class="px-7 py-3 bg-white/5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2"
+                >
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Photo / Vibe Image -->
+          <div class="md:col-span-4 bento-card group !p-0 min-h-[400px]">
+            <img
+              src="/images/minhhn/13.jpg"
+              alt="Server Room"
+              class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-background to-transparent"
+            ></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <h3 class="text-xl font-bold text-white mb-1">Hoàng Nhật Minh</h3>
+              <p class="text-text-muted text-sm">Product-Oriented Engineer</p>
+            </div>
+          </div>
+
+          <!-- Stack - Laravel -->
+          <div class="md:col-span-3 bento-card flex flex-col justify-between">
+            <div class="flex justify-between items-start">
+              <div class="p-3 bg-[#FF2D20]/10 rounded-lg text-[#FF2D20]">
+                <!-- Simple SVG or Lucide for Laravel context -->
+                <i data-lucide="layers" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs text-text-muted font-mono">CORE</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-1">Laravel</h3>
+              <p class="text-sm text-text-muted">
+                Deep expertise in backend architecture & queues.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stack - Search -->
+          <div class="md:col-span-3 bento-card flex flex-col justify-between">
+            <div class="flex justify-between items-start">
+              <div class="p-3 bg-[#0077C0]/10 rounded-lg text-[#0077C0]">
+                <i data-lucide="search" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs text-text-muted font-mono">SEARCH</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-1">Elasticsearch</h3>
+              <p class="text-sm text-text-muted">
+                High-performance indexing & Sphinx search.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stack - Infra -->
+          <div class="md:col-span-3 bento-card flex flex-col justify-between">
+            <div class="flex justify-between items-start">
+              <div class="p-3 bg-purple-500/10 rounded-lg text-purple-500">
+                <i data-lucide="server" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs text-text-muted font-mono">INFRA</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-1">Docker & GCP</h3>
+              <p class="text-sm text-text-muted">
+                Containerization & Cloud deployment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stack - Storage -->
+          <div class="md:col-span-3 bento-card flex flex-col justify-between">
+            <div class="flex justify-between items-start">
+              <div class="p-3 bg-green-500/10 rounded-lg text-green-500">
+                <i data-lucide="database" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs text-text-muted font-mono">STORAGE</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-1">S3 / MinIO</h3>
+              <p class="text-sm text-text-muted">
+                Large-scale asset management.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics & Focus -->
+        <div class="border-t border-white/5 pt-16 mb-24">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <p class="text-5xl font-display font-bold text-white mb-2">3+</p>
+              <p class="text-sm text-text-muted uppercase tracking-wider">
+                Years Experience
+              </p>
+            </div>
+            <div>
+              <p class="text-5xl font-display font-bold text-white mb-2">3M+</p>
+              <p class="text-sm text-text-muted uppercase tracking-wider">
+                Documents Processed
+              </p>
+            </div>
+            <div>
+              <p class="text-5xl font-display font-bold text-white mb-2">3</p>
+              <p class="text-sm text-text-muted uppercase tracking-wider">
+                Major Platforms
+              </p>
+            </div>
+            <div>
+              <p class="text-5xl font-display font-bold text-white mb-2">99%</p>
+              <p class="text-sm text-text-muted uppercase tracking-wider">
+                Uptime Maintained
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Projects Preview -->
+        <div id="projects" class="mb-24">
+          <div class="flex items-center justify-between mb-12">
+            <h2 class="text-3xl font-bold text-white">Featured Work</h2>
+            <a
+              href="experience.html"
+              class="text-primary hover:text-white transition-colors flex items-center gap-2 text-sm font-medium"
+            >
+              View All Projects
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="bento-card group flex flex-col md:flex-row gap-6 !p-0">
+              <div
+                class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden relative"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800"
+                  alt="Code"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 bg-blend-overlay"
+                ></div>
+              </div>
+              <div
+                class="p-6 md:py-8 md:pr-8 flex flex-col justify-center flex-1"
+              >
+                <div
+                  class="text-primary text-xs font-bold uppercase tracking-wider mb-2"
+                >
+                  EdTech & Documents
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">
+                  1Library / 123Doc
+                </h3>
+                <p class="text-text-muted mb-6 text-sm leading-relaxed">
+                  A massive document sharing platform serving millions of users.
+                  Optimized search accuracy with Elasticsearch and handled PDF
+                  conversion pipelines.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400"
+                    >Elasticsearch</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400"
+                    >Microservices</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bento-card group flex flex-col md:flex-row gap-6 !p-0">
+              <div
+                class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden relative"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800"
+                  alt="PDF Tools"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-purple-500/20 bg-blend-overlay"
+                ></div>
+              </div>
+              <div
+                class="p-6 md:py-8 md:pr-8 flex flex-col justify-center flex-1"
+              >
+                <div
+                  class="text-primary text-xs font-bold uppercase tracking-wider mb-2"
+                >
+                  SaaS Tools
+                </div>
+                <p class="text-2xl font-bold text-white mb-3">
+                  PDF Conversion Suite
+                </p>
+                <p class="text-text-muted mb-6 text-sm leading-relaxed">
+                  Built tools for merging, compressing, and OCR processing of
+                  PDF files. Integrated payment gateways (PayPal, Tazapay) for
+                  premium features.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400"
+                    >OCR</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400"
+                    >Queue Jobs</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400"
+                    >Stripe/PayPal</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest Writing -->
+        <div class="mb-24">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-white">Engineering Logs</h2>
+            <a
+              href="blog.html"
+              class="text-text-muted hover:text-white transition-colors text-sm"
+              >View Archive</a
+            >
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="blog-detail.html" class="bento-card !p-0 group">
+              <div class="h-48 overflow-hidden relative">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 relative z-20 -mt-12">
+                <div class="text-primary text-xs font-bold mb-2">
+                  PERFORMANCE
+                </div>
+                <h3
+                  class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-primary transition-colors"
+                >
+                  Optimizing Large Scale Elasticsearch Indices
+                </h3>
+                <p class="text-text-muted text-sm line-clamp-2">
+                  How we reduced search latency by 60% on a 10M+ document
+                  dataset.
+                </p>
+              </div>
+            </a>
+
+            <a href="blog-detail.html" class="bento-card !p-0 group">
+              <div class="h-48 overflow-hidden relative">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1686517120992-bfc74e4ee0c7?auto=format&fit=crop&q=80&w=800"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 relative z-20 -mt-12">
+                <div class="text-primary text-xs font-bold mb-2">LARAVEL</div>
+                <h3
+                  class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-primary transition-colors"
+                >
+                  Efficient PDF Processing with Queues
+                </h3>
+                <p class="text-text-muted text-sm line-clamp-2">
+                  Handling OCR and file conversion asynchronously without
+                  blocking the main thread.
+                </p>
+              </div>
+            </a>
+
+            <a href="blog-detail.html" class="bento-card !p-0 group">
+              <div class="h-48 overflow-hidden relative">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 relative z-20 -mt-12">
+                <div class="text-primary text-xs font-bold mb-2">SEO</div>
+                <h3
+                  class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-primary transition-colors"
+                >
+                  Technical SEO for Document Platforms
+                </h3>
+                <p class="text-text-muted text-sm line-clamp-2">
+                  Strategies for indexing millions of generated pages
+                  efficiently.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Initialize Lucide Icons -->
+    <!-- Initialize Components & Icons -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

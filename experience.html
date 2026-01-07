@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience & Projects | Hoàng Nhật Minh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Loader -->
+    <script src="js/style-loader.js"></script>
+  </head>
+  <body
+    class="antialiased min-h-screen flex flex-col selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6"
+          >
+            Case Studies
+          </div>
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Engineering at Scale
+          </h1>
+          <p class="text-text-muted max-w-2xl mx-auto text-lg">
+            Real-world problems solved with robust architecture, optimized
+            databases, and clean code.
+          </p>
+        </div>
+
+        <div class="space-y-32">
+          <!-- Project 1: Document Platform -->
+          <article
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start group"
+          >
+            <div class="lg:col-span-7 order-2 lg:order-1">
+              <div
+                class="bg-surface rounded-2xl overflow-hidden border border-white/5 mb-8 relative"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1200"
+                  alt="Document System"
+                  class="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"
+                ></div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-surface p-6 rounded-xl border border-white/5">
+                  <h3 class="font-bold text-white mb-2 flex items-center gap-2">
+                    <i
+                      data-lucide="alert-triangle"
+                      class="w-4 h-4 text-red-400"
+                    ></i>
+                    The Challenge
+                  </h3>
+                  <p class="text-sm text-text-muted leading-relaxed">
+                    Scaling a document library to millions of files while
+                    maintaining < 200ms search latency and handling massive
+                    concurrent downloads.
+                  </p>
+                </div>
+                <div class="bg-surface p-6 rounded-xl border border-white/5">
+                  <h3 class="font-bold text-white mb-2 flex items-center gap-2">
+                    <i data-lucide="cpu" class="w-4 h-4 text-primary"></i> The
+                    Solution
+                  </h3>
+                  <p class="text-sm text-text-muted leading-relaxed">
+                    Migrated full-text search to Elasticsearch. Implemented
+                    redis caching layers and CDN integration for static assets.
+                  </p>
+                </div>
+                <div class="bg-surface p-6 rounded-xl border border-white/5">
+                  <h3 class="font-bold text-white mb-2 flex items-center gap-2">
+                    <i
+                      data-lucide="trending-up"
+                      class="w-4 h-4 text-green-400"
+                    ></i>
+                    The Result
+                  </h3>
+                  <p class="text-sm text-text-muted leading-relaxed">
+                    Search speed improved by 300%. Server costs reduced by 40%
+                    via optimized storage handling.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32">
+              <div
+                class="text-8xl font-black text-white/5 absolute -top-12 -left-6 -z-10 select-none"
+              >
+                01
+              </div>
+              <h2 class="text-3xl font-bold text-white mb-4">
+                1Library / 123Doc Scale-Up
+              </h2>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span
+                  class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-mono"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-mono"
+                  >Elasticsearch</span
+                >
+                <span
+                  class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-mono"
+                  >S3 Storage</span
+                >
+              </div>
+
+              <div class="space-y-6 text-text-muted">
+                <p>
+                  As a key backend engineer for one of the largest document
+                  sharing networks in the region, I was responsible for the core
+                  infrastructure processing massive amounts of user-uploaded
+                  content daily.
+                </p>
+                <p>
+                  The existing legacy search (MySQL `LIKE`) was crippling the
+                  database. I architected the migration to a dedicated
+                  <strong>search service using Elasticsearch</strong>, handling
+                  index synchronization via Laravel Queues to ensure data
+                  consistency without blocking user actions.
+                </p>
+              </div>
+
+              <div class="mt-8 pt-8 border-t border-white/5">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <div class="text-2xl font-bold text-white">5M+</div>
+                    <div
+                      class="text-xs text-text-muted uppercase tracking-wider"
+                    >
+                      Documents Indexed
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold text-white">150ms</div>
+                    <div
+                      class="text-xs text-text-muted uppercase tracking-wider"
+                    >
+                      Avg Search Time
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: PDF Tools -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5 lg:sticky lg:top-32">
+              <div
+                class="text-8xl font-black text-white/5 absolute -top-12 -left-6 -z-10 select-none"
+              >
+                02
+              </div>
+              <h2 class="text-3xl font-bold text-white mb-4">
+                PDF Conversion SaaS
+              </h2>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span
+                  class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-mono"
+                  >Microservices</span
+                >
+                <span
+                  class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-mono"
+                  >OCR</span
+                >
+                <span
+                  class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-mono"
+                  >Queue Jobs</span
+                >
+              </div>
+
+              <div class="space-y-6 text-text-muted">
+                <p>
+                  Built a suite of PDF manipulation tools (Split, Merge,
+                  Compress, OCR) designed for high reliability. The challenge
+                  was processing large files (up to 500MB) without timing out
+                  the web server.
+                </p>
+                <p>
+                  I designed an
+                  <strong>asynchronous processing pipeline</strong>. Users
+                  upload files to MinIO S3, a job is pushed to Redis, and
+                  separate worker servers pick up the heavy lifting
+                  (OCR/Conversion), notifying the user via WebSockets when
+                  complete.
+                </p>
+              </div>
+
+              <div class="mt-8 pt-8 border-t border-white/5">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <div class="text-2xl font-bold text-white">100%</div>
+                    <div
+                      class="text-xs text-text-muted uppercase tracking-wider"
+                    >
+                      Non-Blocking UI
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold text-white">Tazapay</div>
+                    <div
+                      class="text-xs text-text-muted uppercase tracking-wider"
+                    >
+                      Payments Integrated
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <div
+                class="bg-surface rounded-2xl overflow-hidden border border-white/5 mb-8 relative"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+                  alt="Chipset"
+                  class="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"
+                ></div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-4">
+                <div
+                  class="p-4 rounded-lg bg-white/5 border border-white/5 flex items-start gap-3"
+                >
+                  <i
+                    data-lucide="check-circle"
+                    class="w-5 h-5 text-primary mt-1"
+                  ></i>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">
+                      Automated OCR Pipelines
+                    </h4>
+                    <p class="text-text-muted text-sm mt-1">
+                      Integrated Tesseract OCR with image preprocessing to
+                      extract text from scanned PDFs with 95% accuracy.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-white/5 border border-white/5 flex items-start gap-3"
+                >
+                  <i
+                    data-lucide="check-circle"
+                    class="w-5 h-5 text-primary mt-1"
+                  ></i>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">
+                      Secure Payment Gateway
+                    </h4>
+                    <p class="text-text-muted text-sm mt-1">
+                      Implemented subscription logic using PayPal and Tazapay
+                      webhooks, handling recurring billing and upgrades.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Call to Action -->
+        <div
+          class="mt-32 p-12 bg-white/5 rounded-3xl border border-white/5 text-center relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-12 opacity-10">
+            <i data-lucide="server" class="w-48 h-48"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-white mb-6 relative z-10">
+            Need a system that scales?
+          </h2>
+          <a
+            href="contact.html"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-background font-bold rounded-lg hover:bg-white transition-colors relative z-10"
+          >
+            Review My Code
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

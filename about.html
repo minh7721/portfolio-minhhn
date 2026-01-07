@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Hoàng Nhật Minh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Loader -->
+    <script src="js/style-loader.js"></script>
+  </head>
+  <body
+    class="antialiased min-h-screen flex flex-col selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Intro Section -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-24">
+          <div class="md:col-span-5 relative">
+            <div class="sticky top-32">
+              <div
+                class="bento-card !p-0 overflow-hidden mb-6 aspect-[4/5] relative group"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800"
+                  alt="Minh"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                />
+                <!-- Overlay Info -->
+                <div
+                  class="absolute bottom-6 left-6 right-6 p-4 glass-panel rounded-xl"
+                >
+                  <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-primary"></i>
+                    <span class="text-sm">Hanoi, Vietnam</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="coffee" class="w-4 h-4 text-primary"></i>
+                    <span class="text-sm">Fuel: Iced Americano</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-7">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6"
+            >
+              About Me
+            </div>
+            <h1
+              class="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight"
+            >
+              Building the backend of the web, one optimized query at a time.
+            </h1>
+            <div
+              class="space-y-6 text-text-muted text-lg leading-relaxed mb-12"
+            >
+              <p>
+                I'm <span class="text-white font-medium">Hoàng Nhật Minh</span>,
+                a Backend Engineer with a sharp focus on scalability and
+                performance. With over 3 years of intensive experience in the
+                Laravel ecosystem, I don't just write code—I build robust
+                engines that power data-heavy applications.
+              </p>
+              <p>
+                My journey has been defined by solving complex problems:
+                managing millions of documents, optimizing search engines for
+                millisecond-latency, and architecting systems that can handle
+                high throughput without breaking a sweat.
+              </p>
+              <p>
+                When I'm not configuring Docker containers or fine-tuning
+                Elasticsearch clusters, you’ll find me on the running track
+                pushing for a new PB or exploring new cities. I believe in
+                discipline, both in code quality and personal growth.
+              </p>
+            </div>
+
+            <!-- Skills Matrix -->
+            <h2 class="text-2xl font-bold text-white mb-6">
+              Technical Arsenal
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
+              <!-- Backend -->
+              <div class="bento-card">
+                <div class="flex items-center gap-3 mb-4 text-primary">
+                  <i data-lucide="server" class="w-6 h-6"></i>
+                  <h3 class="font-bold">Backend Core</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                    Laravel (Advanced)
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    PHP 8.2+
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    MySQL / PostgreSQL
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    Redis / Queue Workers
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Data & Search -->
+              <div class="bento-card">
+                <div class="flex items-center gap-3 mb-4 text-blue-400">
+                  <i data-lucide="search" class="w-6 h-6"></i>
+                  <h3 class="font-bold">Search & Data</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                    Elasticsearch
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    Sphinx Search
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    Algolia
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    MinIO / S3
+                  </li>
+                </ul>
+              </div>
+
+              <!-- DevOps -->
+              <div class="bento-card">
+                <div class="flex items-center gap-3 mb-4 text-purple-400">
+                  <i data-lucide="container" class="w-6 h-6"></i>
+                  <h3 class="font-bold">DevOps & Cloud</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                    Docker
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    Google Cloud Platform
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    Nginx Config
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    CI/CD Pipelines
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Payment & API -->
+              <div class="bento-card">
+                <div class="flex items-center gap-3 mb-4 text-green-400">
+                  <i data-lucide="credit-card" class="w-6 h-6"></i>
+                  <h3 class="font-bold">Services & APIs</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    PayPal Integration
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    Tazapay / VNPay
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    RESTful API Design
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                    JWT Authentication
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Career Timeline -->
+            <h2 class="text-2xl font-bold text-white mb-8">Career Journey</h2>
+            <div class="relative pl-4">
+              <!-- VNP Group -->
+              <div class="relative pl-12 pb-12">
+                <div class="timeline-line"></div>
+                <div class="timeline-dot"></div>
+
+                <div
+                  class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2"
+                >
+                  <h3 class="text-xl font-bold text-white">
+                    PHP Backend Developer
+                  </h3>
+                  <span class="text-primary font-mono text-sm"
+                    >2022 — 2024</span
+                  >
+                </div>
+                <div class="text-lg text-white/80 mb-4">VNP Group</div>
+                <p class="text-text-muted mb-4">
+                  Spearheaded backend development for large-scale document
+                  platforms. Focused on optimizing document ingestion pipelines
+                  and search accuracy.
+                </p>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-start gap-2">
+                    <i
+                      data-lucide="check"
+                      class="w-4 h-4 text-primary mt-0.5"
+                    ></i>
+                    <span
+                      >Maintained 1Library & 123Doc systems serving millions of
+                      users.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      data-lucide="check"
+                      class="w-4 h-4 text-primary mt-0.5"
+                    ></i>
+                    <span
+                      >Built PDF conversion tools (Compress, Merge, OCR)
+                      processing thousands of files daily.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      data-lucide="check"
+                      class="w-4 h-4 text-primary mt-0.5"
+                    ></i>
+                    <span
+                      >Optimized database queries and implemented Elasticsearch
+                      for sub-second search results.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Freelance/Learning -->
+              <div class="relative pl-12">
+                <div
+                  class="timeline-line bg-gradient-to-b from-white/10 to-transparent"
+                ></div>
+                <div class="timeline-dot border-gray-600 bg-gray-600"></div>
+
+                <div
+                  class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2"
+                >
+                  <h3 class="text-xl font-bold text-white">
+                    Freelance & Self-Development
+                  </h3>
+                  <span class="text-gray-500 font-mono text-sm"
+                    >2023 — now</span
+                  >
+                </div>
+                <p class="text-text-muted">
+                  Started journey with Laravel. Built custom websites and
+                  e-commerce solutions for small businesses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

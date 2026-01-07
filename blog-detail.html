@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimizing Elasticsearch | Hoàng Nhật Minh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Loader -->
+    <script src="js/style-loader.js"></script>
+  </head>
+  <body
+    class="antialiased min-h-screen flex flex-col selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+      <article class="max-w-3xl mx-auto">
+        <!-- Article Header -->
+        <div class="mb-12 text-center">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-semibold uppercase tracking-wider mb-6 border border-blue-500/20"
+          >
+            Elasticsearch
+          </div>
+          <h1
+            class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight"
+          >
+            Optimizing Elasticsearch Indices for Large Datasets
+          </h1>
+          <div
+            class="flex items-center justify-center gap-8 text-sm text-text-muted"
+          >
+            <div class="flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Jan 12, 2026</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4"></i>
+              <span>8 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full aspect-video rounded-2xl overflow-hidden mb-12 border border-white/5"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+            alt="Server Data"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="prose">
+          <p>
+            When building document platforms like <strong>1Library</strong> or
+            <strong>123Doc</strong>, one of the biggest challenges is
+            maintaining sub-200ms search speeds while your dataset grows into
+            the millions. A standard "out-of-the-box" Elasticsearch setup works
+            fine for thousands of records, but it starts to choke when you hit
+            scale.
+          </p>
+          <p>
+            Here are the strategies I implemented to reduce search latency by
+            60% and keep our infrastructure costs lean.
+          </p>
+
+          <h2>1. Mapping is Everything</h2>
+          <p>
+            Elasticsearch tries to guess your data types, but it's often
+            wrong—or at least inefficient. Dynamic mapping can lead to "text"
+            fields where you only needed "keyword" fields, bloat your index
+            size, and slow down queries.
+          </p>
+          <p>
+            Explicitly defining your mapping is crucial. For example, disabling
+            `doc_values` for fields you don't sort or aggregate on can save
+            significant disk space.
+          </p>
+
+          <pre>
+PUT /documents
+{
+  "mappings": {
+    "properties": {
+      "title": { "type": "text", "analyzer": "standard" },
+      "description": { "type": "text", "index": false }, 
+      "views_count": { "type": "integer" },
+      "category_id": { "type": "keyword" }
+    }
+  }
+}
+</pre
+          >
+
+          <h2>2. Sharding Strategy</h2>
+          <p>
+            A common mistake is over-sharding. Having too many small shards
+            consumes heap memory and overhead. Conversely, massive shards make
+            recovery painful.
+          </p>
+          <p>
+            For our use case, we aimed for shard sizes between **20GB and
+            40GB**. We used the <strong>Rollover API</strong> to automatically
+            create new indices based on age or document count, ensuring our
+            shards remained in the "Goldilocks" zone.
+          </p>
+
+          <h2>3. Use Filter Context for Caching</h2>
+          <p>
+            Queries in the `query` context calculate a relevance score
+            (`_score`). Queries in the `filter` context do not. If you are just
+            filtering by `status: 'published'` or `category_id: 5`, always use a
+            filter.
+          </p>
+          <p>
+            Elasticsearch caches bitsets for filters, making subsequent queries
+            instantaneous.
+          </p>
+
+          <pre>
+GET /documents/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "title": "laravel architecture" }}
+      ],
+      "filter": [
+        { "term": { "status": "published" }},
+        { "range": { "created_at": { "gte": "now-1y" }}}
+      ]
+    }
+  }
+}
+</pre
+          >
+
+          <h2>Conclusion</h2>
+          <p>
+            Optimization isn't one big switch you flip; it's a series of small,
+            calculated adjustments. By refining our mappings, optimizing our
+            queries, and managing our shards intelligently, we turned a sluggish
+            search experience into a real-time asset.
+          </p>
+        </div>
+
+        <!-- Author Box -->
+        <div
+          class="mt-16 bg-surface border border-white/5 rounded-2xl p-8 flex items-center gap-6"
+        >
+          <div
+            class="w-16 h-16 rounded-full overflow-hidden bg-primary/10 flex-shrink-0"
+          >
+            <img
+              src="/images/minhhn/6.jpg"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">Hoàng Nhật Minh</h3>
+            <p class="text-text-muted text-sm">
+              Senior PHP Laravel Developer. Obsessed with performance and clean
+              architecture.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
